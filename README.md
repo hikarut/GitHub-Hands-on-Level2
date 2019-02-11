@@ -47,15 +47,15 @@ $ git checkout branchA
 ```
 $ git merge --no-ff master
 ```
-  * `--no-ff`オプションはNo fast-forwardオプション
-  * マージコミットを発生させるオプションです
-  * 基本的に`--no-ff`オプションをつけてマージすることをおすすめします
-  * ※マージの際に編集画面が開いた場合は`:wq!`で終了します
+    * `--no-ff`オプションはNo fast-forwardオプション
+    * マージコミットを発生させるオプションです
+    * 基本的に`--no-ff`オプションをつけてマージすることをおすすめします
+    * ※マージの際に編集画面が開いた場合は`:wq!`で終了します
 * Bさんの作成したファイルをAさんが編集
 ```
 $ vim b.html
 ```
-  * ※ファイルの編集は任意のエディタで問題ありません
+    * ※ファイルの編集は任意のエディタで問題ありません
 * 修正分をリモートにプッシュ
 ```
 $ git commit -am "Bさんのファイルを修正"
@@ -70,12 +70,12 @@ $ git push origin branchA
 $ git checkout -b branchC master
 $ vim b.html
 ```
-  * 差分を確認
-  ```
-  $ git diff
-  -my name is B and A
-  +my name is B and A and C
-  ```
+    * 差分を確認
+    ```
+    $ git diff
+    -my name is B and A
+    +my name is B and A and C
+    ```
 * 修正分をリモートに反映
 ```
 $ git commit -am "Cさんの修正"
@@ -86,11 +86,11 @@ $ git push origin branchC
 $ git checkout -b branchD master
 $ vim b.html
 ```
-  * 差分を確認
-  ```
-  $ git diff
-  -my name is B and A
-  +my name is B and A and D
+    * 差分を確認
+    ```
+    $ git diff
+    -my name is B and A
+    +my name is B and A and D
   ```
 * 修正文をリモートに反映
 ```
@@ -126,11 +126,11 @@ $ vim b.html
 4 my name is B and A and C
 5 >>>>>>> master
 ```
-  * Cさんの修正分とDさんの修正分が表示されているので、それを踏まえてどういった修正をするのが正しいか確認する
-  * 今回は以下に修正します
-  ```
-  1 my name is B and A and C and D
-  ```
+    * Cさんの修正分とDさんの修正分が表示されているので、それを踏まえてどういった修正をするのが正しいか確認する
+    * 今回は以下に修正します
+    ```
+    1 my name is B and A and C and D
+    ```
 * 修正が終わったらリモートにプッシュ
 ```
 $ git commit -am "コンフリクトを解消"
