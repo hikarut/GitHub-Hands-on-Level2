@@ -47,15 +47,24 @@ $ git checkout branchA
 ```
 $ git merge --no-ff master
 ```
+* マージについて
   * マージコミットを発生させるオプションです
   * `--no-ff`オプションはNo fast-forwardオプション
   * 基本的に`--no-ff`オプションをつけてマージすることをおすすめします
   * ※マージの際に編集画面が開いた場合は`:wq!`で終了します
-* Bさんの作成したファイルをAさんが編集
+* Bさんの作成したファイルをAさんが編集(ファイルの編集は任意のエディタで問題ありません)
 ```
 $ vim b.html
 ```
-  * ファイルの編集は任意のエディタで問題ありません
+* ※別のエディタで編集する場合
+  * Macの場合以下コマンドで今のディレクトリをファインダーで表示できます
+```
+$ open .
+```
+  * Windowsの場合は以下コマンド
+```
+$ explorer .
+```
 * 修正分をリモートにプッシュ
 ```
 $ git commit -am "Bさんのファイルを修正"
@@ -70,12 +79,12 @@ $ git push origin branchA
 $ git checkout -b branchC master
 $ vim b.html
 ```
-  * 差分を確認
-  ```
-  $ git diff
-  -my name is B and A
-  +my name is B and A and C
-  ```
+* 差分を確認
+```
+$ git diff
+-my name is B and A
++my name is B and A and C
+```
 * 修正分をリモートに反映
 ```
 $ git commit -am "Cさんの修正"
@@ -86,13 +95,13 @@ $ git push origin branchC
 $ git checkout -b branchD master
 $ vim b.html
 ```
-  * 差分を確認
-  ```
-  $ git diff
-  -my name is B and A
-  +my name is B and A and D
-  ```
-* 修正文をリモートに反映
+* 差分を確認
+```
+$ git diff
+-my name is B and A
++my name is B and A and D
+```
+* 修正分をリモートに反映
 ```
 $ git commit -am "Dさんの修正"
 $ git push origin branchD
@@ -115,21 +124,22 @@ Auto-merging b.html
 CONFLICT (content): Merge conflict in b.html
 Automatic merge failed; fix conflicts and then commit the result.
 ```
-* コンフリクトしているファイルを編集して正しい状態に変更する
+* コンフリクトしているファイルを編集(ファイルの編集は任意のエディタで問題ありません)
 ```
 $ vim b.html
 ```
 ```
-1 <<<<<<< HEAD
-2 my name is B and A and D
-3 =======
-4 my name is B and A and C
-5 >>>>>>> master
+<<<<<<< HEAD
+my name is B and A and D
+=======
+my name is B and A and C
+>>>>>>> master
 ```
+* コンフリクトの確認
   * Cさんの修正分とDさんの修正分が表示されているので、それを踏まえてどういった修正をするのが正しいか確認する
   * 今回は以下に修正します
   ```
-  1 my name is B and A and C and D
+  my name is B and A and C and D
   ```
 * 修正が終わったらリモートにプッシュ
 ```
