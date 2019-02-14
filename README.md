@@ -44,6 +44,9 @@ $ git pull
 $ git checkout branchA
 ```
 * masterの修正分をbranchAに取り込む
+```
+$ git merge --no-ff master
+```
   * マージコミットを発生させるオプションです
   * `--no-ff`オプションはNo fast-forwardオプション
   * 基本的に`--no-ff`オプションをつけてマージすることをおすすめします
