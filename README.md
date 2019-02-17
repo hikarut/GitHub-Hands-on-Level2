@@ -150,3 +150,7 @@ $ git push origin branchD
 
 ## その他Tipsの紹介
 ### 修正の取り消し
+#### addする前の修正を取り消す
+#### addしてcommitする前の修正を取り消す
+#### commitしてpushする前の修正を取り消す
+#### pushした修正を取り消す
