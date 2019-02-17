@@ -157,7 +157,7 @@ $ git pull
 $ git checkout -b branchE master
 ```
 
-#### commitする前の修正を取り消す
+#### 1.commitする前の修正を取り消す
 * ファイルを修正
 ```
 $ vim a.html
@@ -177,7 +177,7 @@ $ git diff
 $ git status -s
 ```
 
-#### commitしてpushする前の修正を取り消す
+#### 2.commitしてpushする前の修正を取り消す
 * ファイルを修正
 ```
 $ vim a.html
@@ -203,7 +203,7 @@ $ git reset --hard HEAD^
 $ git log
 ```
 
-#### pushした修正を取り消す
+#### 3.pushした修正を取り消す
 * ファイルを修正
 ```
 $ vim a.html
@@ -235,7 +235,7 @@ $ git revert f7e53bfd1bb0fcf159f0d85943a56c8b1236f5d5
 $ git push origin branchE
 ```
 
-#### pushした修正を取り消す(commit自体をなかったことにする) ※非推奨
+#### 4.pushした修正を取り消す(commit自体をなかったことにする) ※非推奨
 * 直前のコミットを取り消し
 ```
 $ git reset --hard HEAD^
