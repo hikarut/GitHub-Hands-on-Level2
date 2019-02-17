@@ -150,7 +150,87 @@ $ git push origin branchD
 
 ## その他Tipsの紹介
 ### 修正の取り消し
-#### addする前の修正を取り消す
-#### addしてcommitする前の修正を取り消す
+作業用のブランチを作成
+```
+$ git checkout master
+$ git pull
+$ git checkout -b branchE master
+```
+
+#### commitする前の修正を取り消す
+* ファイルを修正
+```
+$ vim a.html
+```
+* 状態を確認
+```
+$ git diff
+$ git status -s
+```
+* 修正の取り消し
+```
+$ git checkout -- a.html
+```
+* 修正がキャンセルされていることを確認
+```
+$ git diff
+$ git status -s
+```
+
 #### commitしてpushする前の修正を取り消す
+* ファイルを修正
+```
+$ vim a.html
+```
+* 修正内容をcommitする
+```
+$ git commit -am "修正"
+```
+* commit内容を確認
+```
+$ git log
+```
+* 直前のコミットを取り消す
+```
+$ git reset --hard HEAD^
+```
+* `reset`オプション
+  * `--hard`オプション：コミット取り消した上でワークディレクトリの内容も書き換えたい場合に使用(addしたものも取り消す場合)
+    * addしたものは取り消さない場合は`--soft`を使う
+  * `HEAD^`：直前のコミット
+* commitが消えていることを確認
+```
+$ git log
+```
+
 #### pushした修正を取り消す
+* ファイルを修正
+```
+$ vim a.html
+```
+* 修正内容をcommitする
+```
+$ git commit -am "修正"
+```
+* リモートにプッシュ
+```
+$ git push origin branchE
+```
+* 取り消したいコミットのハッシュを確認
+```
+$ git log
+
+commit f7e53bfd1bb0fcf159f0d85943a56c8b1236f5d5 (origin/branchE)
+Author: hikarut <ht.hikaru.takahashi@gmail.com>
+Date:   Sun Feb 17 15:11:04 2019 +0900
+
+    修正
+```
+* 取り消したいコミットを指定してrevertする
+```
+$ git revert f7e53bfd1bb0fcf159f0d85943a56c8b1236f5d5
+```
+* revertした内容をリモートにpushする
+```
+$ git push origin branchE
+```
