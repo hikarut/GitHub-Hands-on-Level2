@@ -234,3 +234,20 @@ $ git revert f7e53bfd1bb0fcf159f0d85943a56c8b1236f5d5
 ```
 $ git push origin branchE
 ```
+
+#### pushした修正を取り消す(commit自体をなかったことにする) ※非推奨
+* 直前のコミットを取り消し
+```
+$ git reset --hard HEAD^
+```
+* リモートにプッシュする(エラーになる)
+```
+$ git push origin branchE
+```
+* 強制的に上書きでプッシュする
+```
+$ git push -f origin branchE
+```
+* `-f`オプション
+  * `--force`の省略形
+  * コンフリクトが発生する場合でも、強制上書きができる
