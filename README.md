@@ -21,7 +21,9 @@
 |メリット|・大規模開発向き|・シンプルでわかりやすい<br>・何回もリリースがしやすい|
 |デメリット|・複雑な運用のため使いこなすのが難しい<br>・リリース回数が多い場合に向かない|・同時に複数のリリースが重なる場合に工夫が必要<br>・確認用の環境が用意しにくい|
 
-* [【図解】git-flow、GitHub Flowを開発現場で使い始めるためにこれだけは覚えておこう](https://www.atmarkit.co.jp/ait/articles/1708/01/news015.html)
+* 参考
+  * [【図解】git-flow、GitHub Flowを開発現場で使い始めるためにこれだけは覚えておこう](https://www.atmarkit.co.jp/ait/articles/1708/01/news015.html)
+  * [GitHub Flow](https://gist.github.com/Gab-km/3705015)
 
 ## 複数人での開発方法(GitHub Flowを体験)
 ※擬似的に複数人(Aさん、Bさん)での開発を想定して作業をします。
