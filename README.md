@@ -1,6 +1,6 @@
 # GitHubハンズオン(中級)
 ## やる事
-* Git FlowとGitHub Flow
+* Git FlowとGitHub Flowの説明
 * 複数人での開発方法(GitHub Flowを体験)
 * コンフリクトの解消
 * その他Tipsの紹介
