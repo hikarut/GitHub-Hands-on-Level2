@@ -1,6 +1,7 @@
 # GitHubハンズオン(中級)
 ## やる事
-* 複数人での開発方法
+* Git FlowとGitHub Flow
+* 複数人での開発方法(GitHub Flowを体験)
 * コンフリクトの解消
 * その他Tipsの紹介
 
@@ -9,7 +10,9 @@
   * [GitHub-Hands-on](https://github.com/egg-system/GitHub-Hands-on)
 * 初級に続き**コマンドライン**から操作をしてもらいます
 
-## 複数人での開発方法
+## Git FlowとGitHub Flow
+
+## 複数人での開発方法(GitHub Flowを体験)
 ※擬似的に複数人(Aさん、Bさん)での開発を想定して作業をします。
 * Aさんの作業用ブランチを作成
 ```
