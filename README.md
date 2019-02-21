@@ -1,8 +1,9 @@
 # GitHubハンズオン(中級)
 ## やる事
 * Git FlowとGitHub Flowについて
-* 複数人での開発方法(GitHub Flowを体験)
-* コンフリクトの解消
+* GitHub Flowを使った開発
+  * 複数人での開発方法
+  * コンフリクトの解消
 * その他Tipsの紹介
 
 ## 注意点
@@ -15,6 +16,7 @@
 * 複数人で開発する際にルールに沿って行う事で円滑に開発・運用を進めることができます
   * ブランチの運用方法、リリース方法などを決めたものです
 * 代表的なルールに`Git Flow`と`GitHub Flow`があります
+  * 上記以外に[GitLab Flow](https://qiita.com/tlta-bkhn/items/f2950aaf00bfb6a8c30d)や[GitFeature Flow](https://developers.gnavi.co.jp/entry/GitFeatureFlow/koyama)などがありますが、ここでは上記2つを説明します
 
 | |Git Flow|GitHub Flow|
 |:-|:-|:-|
